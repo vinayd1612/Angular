@@ -1,0 +1,45 @@
+<!-- <br>
+
+Enter CommentId <input type="text" [(ngModel)]="cid" /><br>
+Enter Commenter <input type="text" [(ngModel)]="commenter" /><br>
+Enter Post Id <input type="text" [(ngModel)]="pid" /><br>
+Enter Comment <input type="text" [(ngModel)]="comment" /><br>
+<button (click)="insertComment()">Register</button>
+
+!-->
+
+<form [formGroup]="formdata" (ngSubmit)="submit(formdata.value)">
+
+    CId: <input type="text" formControlName="cidd">
+    <br>
+    <div *ngIf="formdata.controls['cidd'].errors">
+         minimum length of Cid should be 3
+    </div>
+    <br><br>
+    
+    Commentor: <input type="text" formControlName="commenterr">
+    <br>
+    <div *ngIf="formdata.controls['commenterr'].errors">
+        commentor can not be empty
+    </div>
+<br><br>
+    
+    PId: <input type="text" formControlName="pidd">
+    <br>
+    <div *ngIf="formdata.controls['pidd'].errors">
+         minimum length of pid should be 3
+    </div>
+
+    <br><br>
+    Comment: <input type="text" formControlName="commentt">
+    <br>
+    <div *ngIf="formdata.controls['commentt'].errors">
+        Comment must be minimum of 10 characters
+    </div>
+    <br>
+    <button type="submit">Submit</button>
+</form>
+<br>
+<div *ngIf="f" style="color: green;">{{msg}}</div>
+
+<div *ngIf="!f" style="color:red;">{{msg}}</div>

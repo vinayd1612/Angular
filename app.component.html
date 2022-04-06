@@ -1,0 +1,25 @@
+<!--UserId: <input type="text"  [(ngModel)]="uid"/>
+<br><br>
+Password: <input type="password"  [(ngModel)]="password"/>
+<br><br>
+<button (click)="validate()">Validate</button>
+
+<router-outlet></router-outlet>
+-->
+
+<ul class="nav nav-pills">
+  <li class="nav-item">
+    <a class="nav-link" routerLink="display">Display</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="search">Search</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="register">Add Post</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="delete">Delete Post</a>
+  </li>
+ </ul>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,14 @@
+<p>login works!</p>
+
+<form [formGroup]="formdata" (ngSubmit)="validate()">
+    
+UserId: <input type="text"  formControlName="uidd"/>
+<br>
+<div *ngIf="formdata.controls['uidd'].errors"> UserID can not be empty</div>
+Password: <input type="password"  formControlName="passwordd"/>
+<br>
+<div *ngIf="formdata.controls['passwordd'].errors"> Password can not be empty</div><br>
+<button (click)="validate()">Validate</button>
+
+
+</form>
